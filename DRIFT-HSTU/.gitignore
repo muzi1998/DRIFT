@@ -1,0 +1,10 @@
+# Local metadata and generated artifacts
+._*
+.DS_Store
+__pycache__/
+*.py[cod]
+logs/
+ckpt/
+experiments/
+drift_cache/
+ml_drift_cache/

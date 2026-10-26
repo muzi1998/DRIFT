@@ -1,0 +1,49 @@
+Anonymous code-package audit
+Checked: 2026-10-26
+
+Policy source
+  https://www2027.thewebconf.org/research-track-papers/
+  The Anonymity section requires double-blind submissions to omit author names,
+  affiliations, and other identifying information. References to the authors'
+  prior work should use the third person. Dataset and tool providers may be named.
+
+Scope and result
+  The local source package was inspected, including hidden-file inventory,
+  Python comments and string literals, shell launchers, and documentation.
+  All 66 Python files passed syntax compilation without generating bytecode.
+  No author identities, personal email addresses, private repository URLs,
+  server addresses, credentials, or machine-specific absolute path literals
+  were found in the distributable source files.
+  Public dataset/model names and generic interpreter shebangs were retained.
+  Runtime path resolution from __file__ and user-supplied paths is intentional.
+
+Cleanup
+  60 AppleDouble sidecars, 2 .DS_Store files, and 1 generated Python bytecode
+  file were removed from the code directory into a recoverable local quarantine.
+  These 63 files are absent from the submission archive.
+  Ignore rules now exclude macOS sidecars and generated cache files.
+  Valid package initializers, model modules, and optional experiment entries
+  were preserved. An entry is not invalid merely because its dataset or optional
+  pretrained assets are distributed separately.
+
+Launcher compatibility
+  KuaiRec and ML-20M revised TIGER calls now explicitly interpret timestamp
+  columns as seconds. The Taobao MM revised TIGER call now selects the final
+  processed dataset directory directly.
+
+Anonymous archive
+  WWWcode_anonymous.zip is the intended review copy, with a neutral code/ root.
+  Local .git history is preserved for development and excluded completely from
+  the archive. Do not submit the raw development directory with .git included:
+  its configuration and history can disclose author and repository information.
+  Internal migration/comparison and planning notes are excluded from the archive.
+  The archive contains no data, logs, checkpoints, caches, or recovery files.
+  ZIP timestamps and file attributes are normalized; ZIP comments and extra
+  metadata are empty. MANIFEST.sha256 records the archived file contents.
+
+Boundary of this audit
+  This is a source-artifact inspection, not conference approval. The paper PDF,
+  submission fields, self-citation wording, and any external hosting or download
+  links must independently preserve anonymity. The official page describes the
+  submitted document; the same identity checks were applied conservatively to
+  the accompanying code. No full training experiment was run for this audit.

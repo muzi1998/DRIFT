@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+data/
+outputs/
+rqvae/ckpt/
+rqvae/outputs/
+*.log
+
+# macOS
+.DS_Store
+._*
+
+# Generated caches and editor state
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
